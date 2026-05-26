@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio of Sphesihle Khehla Msane - IT Technician, Systems Administrator, Founder of MKETICS, and technology solutions professional." />
+  <meta name="keywords" content="Sphesihle Msane, MKETICS, IT Technician, Systems Administrator, Software Developer, Cloud, Networking, CCTV, South Africa" />
+  <meta name="author" content="Sphesihle Khehla Msane" />
+  <title>Sphesihle Khehla Msane | IT Technician & Founder of MKETICS</title>
+  <style>
+    :root {
+      --bg: #07111f;
+      --bg-soft: #0d1b2e;
+      --card: rgba(255, 255, 255, 0.075);
+      --text: #f4f7fb;
+      --muted: #b6c2d1;
+      --brand: #38bdf8;
+      --brand-2: #22c55e;
+      --border: rgba(255, 255, 255, 0.12);
+      --shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
+      --radius: 24px;
+      --max: 1160px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(56, 189, 248, 0.22), transparent 34%),
+        radial-gradient(circle at top right, rgba(34, 197, 94, 0.13), transparent 34%),
+        var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+    section { padding: 88px 22px; }
+    .container { max-width: var(--max); margin: auto; }
+
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(18px);
+      background: rgba(7, 17, 31, 0.72);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-inner {
+      max-width: var(--max);
+      margin: auto;
+      padding: 18px 22px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+    }
+
+    .logo-mark {
+      width: 42px;
+      height: 42px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, var(--brand), var(--brand-2));
+      display: grid;
+      place-items: center;
+      color: #04111f;
+      font-weight: 900;
+      box-shadow: 0 14px 35px rgba(56, 189, 248, 0.25);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      color: var(--muted);
+      font-size: 0.94rem;
+    }
+
+    .nav-links a:hover { color: var(--text); }
+
+    .hero {
+      min-height: 88vh;
+      display: grid;
+      align-items: center;
+      padding-top: 105px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 42px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      gap: 10px;
+      align-items: center;
+      padding: 9px 14px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      color: var(--muted);
+      background: rgba(255, 255, 255, 0.05);
+      margin-bottom: 24px;
+      font-size: 0.92rem;
+    }
+
+    .pulse {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: var(--brand-2);
+      box-shadow: 0 0 0 8px rgba(34, 197, 94, 0.13);
+    }
+
+    h1 {
+      font-size: clamp(2.8rem, 7vw, 5.8rem);
+      line-height: 0.98;
+      letter-spacing: -0.075em;
+      margin-bottom: 24px;
+    }
+
+    .gradient-text {
+      background: linear-gradient(120deg, #fff, #8be9ff 45%, #8cffb3);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .lead {
+      max-width: 720px;
+      font-size: 1.16rem;
+      color: var(--muted);
+      margin-bottom: 32px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-bottom: 36px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 13px 18px;
+      border-radius: 14px;
+      font-weight: 700;
+      border: 1px solid var(--border);
+      transition: transform 0.2s ease, background 0.2s ease;
+    }
+
+    .btn:hover { transform: translateY(-2px); }
+    .btn-primary {
+      background: linear-gradient(135deg, var(--brand), var(--brand-2));
+      color: #04111f;
+      border: none;
+    }
+    .btn-ghost { background: rgba(255, 255, 255, 0.06); color: var(--text); }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      max-width: 720px;
+    }
+
+    .stat {
+      padding: 18px;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    .stat strong { display: block; font-size: 1.55rem; color: var(--text); }
+    .stat span { color: var(--muted); font-size: 0.9rem; }
+
+    .profile-card {
+      position: relative;
+      padding: 28px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: linear-gradient(180deg, rgba(255,255,255,0.1), rgba(255,255,255,0.04));
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .profile-card::before {
+      content: "";
+      position: absolute;
+      width: 220px;
+      height: 220px;
+      background: rgba(56, 189, 248, 0.18);
+      filter: blur(60px);
+      right: -80px;
+      top: -80px;
+    }
+
+    .avatar {
+      position: relative;
+      height: 210px;
+      border-radius: 22px;
+      background:
+        linear-gradient(135deg, rgba(56,189,248,0.26), rgba(34,197,94,0.2)),
+        rgba(255,255,255,0.06);
+      display: grid;
+      place-items: center;
+      margin-bottom: 22px;
+      border: 1px solid var(--border);
+    }
+
+    .avatar span {
+      font-size: 4.5rem;
+      font-weight: 900;
+      letter-spacing: -0.08em;
+    }
+
+    .profile-card h2 { font-size: 1.55rem; margin-bottom: 8px; }
+    .profile-card p { color: var(--muted); }
+
+    .contact-list {
+      margin-top: 22px;
+      display: grid;
+      gap: 10px;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .section-head {
+      max-width: 780px;
+      margin-bottom: 34px;
+    }
+
+    .section-head h2 {
+      font-size: clamp(2rem, 4vw, 3.3rem);
+      letter-spacing: -0.055em;
+      line-height: 1.05;
+      margin-bottom: 14px;
+    }
+
+    .section-head p { color: var(--muted); font-size: 1.06rem; }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .card {
+      padding: 24px;
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      background: var(--card);
+      box-shadow: 0 18px 45px rgba(0,0,0,0.17);
+    }
+
+    .card h3 { margin-bottom: 10px; font-size: 1.18rem; }
+    .card p, .card li { color: var(--muted); }
+    .card ul { padding-left: 18px; display: grid; gap: 8px; }
+
+    .tag-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .tag {
+      padding: 7px 11px;
+      border-radius: 999px;
+      background: rgba(56, 189, 248, 0.1);
+      border: 1px solid rgba(56, 189, 248, 0.18);
+      color: #d9f6ff;
+      font-size: 0.85rem;
+    }
+
+    .timeline {
+      display: grid;
+      gap: 18px;
+    }
+
+    .timeline-item {
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      gap: 20px;
+      padding: 24px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: rgba(255,255,255,0.055);
+    }
+
+    .timeline-date { color: var(--brand); font-weight: 800; }
+    .timeline-content h3 { margin-bottom: 6px; }
+    .timeline-content p { color: var(--muted); margin-bottom: 12px; }
+
+    .project-card {
+      min-height: 260px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .project-top p { margin-bottom: 16px; }
+
+    .footer {
+      padding: 40px 22px;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      text-align: center;
+    }
+
+    @media (max-width: 900px) {
+      .hero-grid, .grid-2, .grid-3 { grid-template-columns: 1fr; }
+      .stats { grid-template-columns: 1fr; }
+      .timeline-item { grid-template-columns: 1fr; }
+      .nav-links { display: none; }
+      section { padding: 68px 20px; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a class="logo" href="#home" aria-label="Home">
+        <span class="logo-mark">SM</span>
+        <span>Sphesihle Msane</span>
+      </a>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <main id="home" class="hero">
+    <section>
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow"><span class="pulse"></span> IT Technician • Systems Administrator • Founder</div>
+          <h1>Building reliable <span class="gradient-text">technology systems</span> for real-world impact.</h1>
+          <p class="lead">
+            I am Sphesihle Khehla Msane, an IT Support Technician and founder of MKETICS. I work across IT support, networking, system administration, cloud solutions, CCTV, software engineering, and digital business platforms.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="mailto:smsane0505@gmail.com">Email Me</a>
+            <a class="btn btn-ghost" href="https://mketics.co.za" target="_blank" rel="noopener">Visit MKETICS</a>
+            <a class="btn btn-ghost" href="https://www.linkedin.com/in/sphesihle-msane-507bb5350/" target="_blank" rel="noopener">LinkedIn</a>
+          </div>
+          <div class="stats">
+            <div class="stat"><strong>400+</strong><span>Users supported in government environments</span></div>
+            <div class="stat"><strong>200+</strong><span>Campus users supported at Ehlanzeni TVET College</span></div>
+            <div class="stat"><strong>ICT</strong><span>Bachelor of Information & Communications Technology</span></div>
+          </div>
+        </div>
+
+        <aside class="profile-card">
+          <div class="avatar"><span>SM</span></div>
+          <h2>Sphesihle Khehla Msane</h2>
+          <p>IT Technician / Systems Administrator with experience in educational and government technology environments.</p>
+          <div class="contact-list">
+            <span>📍 KwaDukuza, KwaZulu-Natal, South Africa</span>
+            <span>📧 smsane0505@gmail.com</span>
+            <span>📞 072 286 4367 / 064 686 7919</span>
+            <span>🌐 mketics.co.za</span>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <section id="about">
+    <div class="container">
+      <div class="section-head">
+        <h2>About me</h2>
+        <p>
+          I support organisations by solving technical issues, maintaining infrastructure, improving systems, and helping people use technology with confidence.
+        </p>
+      </div>
+      <div class="grid-2">
+        <div class="card">
+          <h3>Professional Profile</h3>
+          <p>
+            I have hands-on experience supporting large-scale IT environments across government and education. My background includes troubleshooting, networking, system administration, user support, hardware and software installation, IT asset management, and technical documentation.
+          </p>
+        </div>
+        <div class="card">
+          <h3>MKETICS</h3>
+          <p>
+            MKETICS stands for Modern Knowledge Engineering Tech Innovative Communication Solutions. The company focuses on software engineering, cloud, IT systems, networking, CCTV, and digital solutions for schools, tertiary institutions, private companies, and individuals.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="container">
+      <div class="section-head">
+        <h2>Core skills</h2>
+        <p>A practical blend of technical support, infrastructure, systems, and digital solution development.</p>
+      </div>
+      <div class="grid-3">
+        <div class="card">
+          <h3>IT Support & Systems</h3>
+          <ul>
+            <li>1st & 2nd line IT support</li>
+            <li>System administration</li>
+            <li>Active Directory & user management</li>
+            <li>Hardware and software installation</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Networking & Infrastructure</h3>
+          <ul>
+            <li>LAN/WAN support</li>
+            <li>Routers, switches, and firewalls</li>
+            <li>Network diagnostics</li>
+            <li>Internet usage monitoring</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Digital Solutions</h3>
+          <ul>
+            <li>Web development</li>
+            <li>Scripting and automation</li>
+            <li>Cloud solutions</li>
+            <li>CCTV and digital business platforms</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <div class="container">
+      <div class="section-head">
+        <h2>Experience</h2>
+        <p>Technical experience across campus infrastructure, government systems, end-user support, and business operations.</p>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-date">Nov 2024 – Present</div>
+          <div class="timeline-content">
+            <h3>IT Technician / Systems Administrator Intern</h3>
+            <p>Ehlanzeni TVET College</p>
+            <ul>
+              <li>Provide IT support to 200+ users across campus systems and infrastructure.</li>
+              <li>Install, configure, and maintain computers, applications, and network systems.</li>
+              <li>Support system security, audits, web-based systems, and service improvement.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-date">Jun 2023 – Aug 2024</div>
+          <div class="timeline-content">
+            <h3>IT Technician Intern</h3>
+            <p>Department of Home Affairs</p>
+            <ul>
+              <li>Supported 400+ users across offices, branches, and mobile units.</li>
+              <li>Maintained routers, switches, firewalls, biometric devices, printers, and connectivity.</li>
+              <li>Supported critical government systems including EDNA, BAS, PERSAL, and LOGIS.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-date">2022 – 2024</div>
+          <div class="timeline-content">
+            <h3>Operations & Customer-Facing Roles</h3>
+            <p>Gold Circle • Dis-Chem Pharmacies</p>
+            <ul>
+              <li>Developed accuracy, accountability, customer service, and inventory discipline.</li>
+              <li>Handled fast-paced environments and multiple operational requests.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="container">
+      <div class="section-head">
+        <h2>Selected work</h2>
+        <p>Use this section to showcase your strongest technical and business projects.</p>
+      </div>
+      <div class="grid-3">
+        <article class="card project-card">
+          <div class="project-top">
+            <h3>MKETICS Company Website</h3>
+            <p>A professional company website for MKETICS, positioning the business around enterprise technology solutions.</p>
+            <div class="tag-row">
+              <span class="tag">Business Website</span>
+              <span class="tag">SEO</span>
+              <span class="tag">IT Services</span>
+            </div>
+          </div>
+          <a class="btn btn-ghost" href="https://mketics.co.za" target="_blank" rel="noopener">View Project</a>
+        </article>
+
+        <article class="card project-card">
+          <div class="project-top">
+            <h3>Campus Network Support</h3>
+            <p>Infrastructure support, network diagnostics, documentation, and IT service improvement in an educational environment.</p>
+            <div class="tag-row">
+              <span class="tag">Networking</span>
+              <span class="tag">LAN/WAN</span>
+              <span class="tag">Support</span>
+            </div>
+          </div>
+          <a class="btn btn-ghost" href="#contact">Discuss Similar Work</a>
+        </article>
+
+        <article class="card project-card">
+          <div class="project-top">
+            <h3>CCTV & Digital Protection Vision</h3>
+            <p>A developing MKETICS service direction focused on moving CCTV beyond recording into stronger property protection and response capability.</p>
+            <div class="tag-row">
+              <span class="tag">CCTV</span>
+              <span class="tag">Security</span>
+              <span class="tag">Innovation</span>
+            </div>
+          </div>
+          <a class="btn btn-ghost" href="https://mketics.co.za" target="_blank" rel="noopener">Visit MKETICS</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="education">
+    <div class="container">
+      <div class="section-head">
+        <h2>Education & certifications</h2>
+        <p>Formal ICT education supported by technical certification and practical field experience.</p>
+      </div>
+      <div class="grid-2">
+        <div class="card">
+          <h3>Bachelor of Information and Communications Technology</h3>
+          <p>Durban University of Technology • Completed December 2022</p>
+        </div>
+        <div class="card">
+          <h3>CompTIA A+ Part 1 & Part 2</h3>
+          <p>Alison • Completed Nov – Dec 2024</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <div class="section-head">
+        <h2>Let’s build something reliable.</h2>
+        <p>Contact me for IT support, systems administration, networking, cloud, CCTV, web development, or MKETICS technology solutions.</p>
+      </div>
+      <div class="card">
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="mailto:smsane0505@gmail.com">Email: smsane0505@gmail.com</a>
+          <a class="btn btn-ghost" href="tel:+27722864367">Call: 072 286 4367</a>
+          <a class="btn btn-ghost" href="https://www.linkedin.com/in/sphesihle-msane-507bb5350/" target="_blank" rel="noopener">LinkedIn Profile</a>
+          <a class="btn btn-ghost" href="https://mketics.co.za" target="_blank" rel="noopener">MKETICS Website</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> Sphesihle Khehla Msane. Built for GitHub Pages.</p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
